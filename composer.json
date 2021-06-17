@@ -1,0 +1,27 @@
+{
+    "name": "yiizh.com/yiizh.com",
+    "description": "Yii中文网",
+    "keywords": [
+        "yii2",
+        "font awesome"
+    ],
+    "homepage": "http://git.oschina.net/yiizh.com/yii2-font-awesome",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Di Zhang",
+            "email": "zhangdi_me@163.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bower-asset/fontawesome": "4.2.*@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "yiizh\\fontawesome\\": "src"
+        }
+    }
+}
