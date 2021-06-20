@@ -7,7 +7,7 @@ namespace yiizh\fontawesome;
 
 use yii\helpers\Html;
 
-class Icon extends Html
+class Icon
 {
 
     /**
@@ -17,15 +17,15 @@ class Icon extends Html
     public static function i($name)
     {
         $names = preg_split('/\s*/', trim($name), -1, PREG_SPLIT_NO_EMPTY);
-        self::addCssClass($options, 'fa');
+        Html::addCssClass($options, 'fa');
         foreach ($names as $key => $value) {
             if (stripos('fa-', $value) !== false) {
-                self::addCssClass($options, $name);
+                Html::addCssClass($options, $name);
 
             } else {
-                self::addCssClass($options, 'fa-' . $name);
+                Html::addCssClass($options, 'fa-' . $name);
             }
         }
-        return self::tag('i', '', $options);
+        return Html::tag('i', '', $options);
     }
 }
