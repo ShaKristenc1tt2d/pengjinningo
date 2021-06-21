@@ -16,14 +16,15 @@ class Icon
      */
     public static function i($name)
     {
-        $names = preg_split('/\s*/', trim($name), -1, PREG_SPLIT_NO_EMPTY);
+        $names = explode(' ', $name);
         Html::addCssClass($options, 'fa');
         foreach ($names as $key => $value) {
-            if (stripos('fa-', $value) !== false) {
-                Html::addCssClass($options, $name);
-
-            } else {
-                Html::addCssClass($options, 'fa-' . $name);
+            if (!empty($value)) {
+                if (stripos($value, 'fa-') !== false) {
+                    Html::addCssClass($options, $value);
+                } else {
+                    Html::addCssClass($options, 'fa-' . $value);
+                }
             }
         }
         return Html::tag('i', '', $options);
