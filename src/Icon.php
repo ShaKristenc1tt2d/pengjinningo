@@ -12,9 +12,10 @@ class Icon
 
     /**
      * @param string $name e.g <code><?=yiizh\fontawesome\Icon::i("home 2x");?></code>
+     * @param array $options
      * @return string
      */
-    public static function i($name)
+    public static function i($name, &$options = [])
     {
         $names = explode(' ', $name);
         Html::addCssClass($options, 'fa');
