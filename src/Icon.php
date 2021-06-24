@@ -15,7 +15,7 @@ class Icon
      * @param array $options
      * @return string
      */
-    public static function i($name, &$options = [])
+    public static function i($name, $options = [])
     {
         $names = explode(' ', $name);
         Html::addCssClass($options, 'fa');
